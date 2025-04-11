@@ -1,0 +1,29 @@
+{
+    "name": "MCS_WAS_E7",
+    "image": "mcr.microsoft.com/devcontainers/python:bookworm",
+    "postCreateCommand": "python3 -m pip install numpy",
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "python.languageServer": "Pylance",
+                "python.analysis.typeCheckingMode": "basic"
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                // Programming language agnostic tools
+                "mhutchie.git-graph",
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
+    // Container user VS Code should use when connecting
+    "remoteUser": "vscode"
+}
