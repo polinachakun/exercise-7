@@ -22,3 +22,6 @@ class Ant():
     # Position an ant in an environment
     def join(self, environment):
         self.environment = environment
+    
+    def get_distance(self):
+        pass

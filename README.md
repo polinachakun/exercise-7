@@ -1,8 +1,12 @@
 # Exercise 7: Stigmergic interaction for Smart Colony Optimization
 
-This repository contains a partial implementation of an Ant System algorithm [1] for solving the [att48](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/) Travelling Salesman Problem instance. 
+This repository contains a partial implementation of an Ant System algorithm \[[1],[2]\] for solving the [att48](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/) Travelling Salesman Problem instance. 
 
-[1] Dorigo, M., & Stützle, T. (2004). Ant colony optimization. The MIT Press.
+- \[[1]\] Dorigo, M., & Stützle, T. (2004). Ant colony optimization. The MIT Press.
+- \[[2]\] M. Dorigo, M. Birattari, and T. Stutzle, “Ant colony optimization,” IEEE Computational Intelligence Magazine, vol. 1, no. 4, pp. 28–39, Nov. 2006, doi: 10.1109/mci.2006.329691
+
+[1]: <https://ieeexplore.ieee.org/book/6267250> "Ant colony optimization"
+[2]: <https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization> "Ant colony optimization"
 
 ## Table of Contents
 - [Project structure](#project-structure)
@@ -41,33 +45,35 @@ python3 ant-colony.py
 ### Task 1.1 
 Complete the implementation of [`environment.py`](environment.py):
 - the constrcutor of the class `Environment` so that the environment is initialized based on the topology of the [att48](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/) TSP instance;
-- the function `initialize_pheromone_map()` for initializing the pheromone trails in the environment based on the Ant System algorithm.
+- the function [`initialize_pheromone_map()`](environment.py#L19) for initializing the pheromone trails in the environment based on the Ant System algorithm.
   - HINT: The 3rd-party Python library [tsplib95](https://pypi.org/project/tsplib95/) enables parsing files of the TSPLIB library (e.g. TSP problem and solution files).
-  - HINT: The book by (Dorigo and Stützle; 2004) provides directions for the initialization of the pheromone map in the Ant System algorithm.
+  - HINT: The book by (Dorigo and Stützle; 2004) provides directions for the initialization of the pheromone map in the Ant System algorithm \[[1]\].
   
 ### Task 1.2 
 Complete the implementation of [`environment.py`](environment.py):
-- the function `update_pheromone_map()` for updating the pheromone trails in the environment after each cycle based on the Ant System algorithm.
+- the function [`update_pheromone_map()`](environment.py#L23) for updating the pheromone trails in the environment after each cycle based on the Ant System algorithm.
 
 ## Task 2
 
 ### Task 2.1
 Complete the implementation of [`ant.py`](ant.py):
-- the function `get_distance()` for enabling an ant to compute the pseudo-euclidean distance between two cities in the environment;
-- the function `select_path()` for enabling an ant to select the next path to follow based on the Ant System algorithm. 
+- the function [`get_distance()`](ant.py#L26) for enabling an ant to compute the pseudo-euclidean distance between two cities in the environment;
+- the function [`select_path()`](ant.py#L19) for enabling an ant to select the next path to follow based on the Ant System algorithm. 
   - HINT: The specification of the pseudo-euclidean distance algorithm is available in the [TSPLIB95 documentation](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp95.pdf).
   
 ### Task 2.2 
 Complete the implementation of [`ant.py`](ant.py):
-- the function `run()` for enabling an ant to select and visit locations until it has visited all possible locations of its environment based on the Ant System algorithm.
+- the function [`run()`](ant.py#L15) for enabling an ant to select and visit locations until it has visited all possible locations of its environment based on the Ant System algorithm.
 
 ### Task 2.3 
 Complete the implementation of [`ant-colony.py`](ant-colony.py):
-- the function `solve()` for producing a solution for the [att48](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/) TSP instance based on the Ant System algorithm.
-  - HINT: The book by (Dorigo and Stützle; 2004) provides directions for the parametrization of the Ant System algorithm.
+- the function [`solve()`](ant-colony.py#L41) for producing a solution for the [att48](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/) TSP instance based on the Ant System algorithm.
+  - HINT: The book by (Dorigo and Stützle; 2004) provides directions for the parametrization of the Ant System algorithm \[[1]\].
 
 ## Documentation 
 - [tsplib95 Python library API documentation](https://tsplib95.readthedocs.io/en/stable/) for working with TSPLIB 95 files (e.g., problem specifications);
 - [tsplib95 glossary and documentation](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp95.pdf) for working with the pseudo-euclidean distance algorithm;
-- (Dorigo and Stützle; 2004) Dorigo, M., & Stutzle, T. (2004). Ant colony optimization. The MIT Press; for working with the TSP and the Ant System algorithm;
+-  For working with the TSP and the Ant System algorithm:
+   - \[[1]\] Dorigo, M., & Stützle, T. (2004). Ant colony optimization. The MIT Press.
+   - \[[2]\] M. Dorigo, M. Birattari, and T. Stutzle, “Ant colony optimization,” IEEE Computational Intelligence Magazine, vol. 1, no. 4, pp. 28–39, Nov. 2006, doi: 10.1109/mci.2006.329691
 - [Lecture slides; slides 18-42](https://learning.unisg.ch/courses/19882/files/2757800?module_item_id=564752).
