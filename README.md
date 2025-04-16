@@ -5,7 +5,7 @@ This repository contains a partial implementation of an Ant System algorithm \[[
 - \[[1]\] Dorigo, M., & Stützle, T. (2004). Ant colony optimization. The MIT Press.
 - \[[2]\] M. Dorigo, M. Birattari, and T. Stutzle, “Ant colony optimization,” IEEE Computational Intelligence Magazine, vol. 1, no. 4, pp. 28–39, Nov. 2006, doi: 10.1109/mci.2006.329691
 
-[1]: <https://ieeexplore.ieee.org/book/6267250> "Ant colony optimization"
+[1]: <https://dl.icdst.org/pdfs/files4/237b1d0e920bc5d59b75462e283d1559.pdf> "Ant colony optimization"
 [2]: <https://www.researchgate.net/publication/308953674_Ant_Colony_Optimization> "Ant colony optimization"
 
 ## Table of Contents
@@ -76,4 +76,4 @@ Complete the implementation of [`ant-colony.py`](ant-colony.py):
 -  For working with the TSP and the Ant System algorithm:
    - \[[1]\] Dorigo, M., & Stützle, T. (2004). Ant colony optimization. The MIT Press.
    - \[[2]\] M. Dorigo, M. Birattari, and T. Stutzle, “Ant colony optimization,” IEEE Computational Intelligence Magazine, vol. 1, no. 4, pp. 28–39, Nov. 2006, doi: 10.1109/mci.2006.329691
-- [Lecture slides; slides 18-42](https://learning.unisg.ch/courses/19882/files/2757800?module_item_id=564752).
+- [Lecture slides; slides 22-45](https://learning.unisg.ch/courses/22565/files/3371367?module_item_id=672513).

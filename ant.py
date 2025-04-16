@@ -9,7 +9,7 @@ class Ant():
         self.alpha = alpha
         self.beta = beta
         self.current_location = initial_location
-        self.travelled_distance = 0
+        self.traveled_distance = 0
 
     # The ant runs to visit all the possible locations of the environment 
     def run(self):

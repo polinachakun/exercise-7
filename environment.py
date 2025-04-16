@@ -11,11 +11,11 @@ class Environment:
         
         # Initialize the environment topology
 
-        # Intialize the pheromone map in the environment
+        # Initialize the pheromone map in the environment
 
         pass 
 
-    # Intialize the pheromone trails in the environment
+    # Initialize the pheromone trails in the environment
     def initialize_pheromone_map(self):
         pass
 
