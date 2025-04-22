@@ -1,4 +1,4 @@
-
+import random
 # Class representing an artificial ant of the ant colony
 """
     alpha: a parameter controlling the influence of the amount of pheromone during ants' path selection process
