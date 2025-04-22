@@ -20,7 +20,7 @@ class AntColony:
         self.rho = rho 
 
         # Initialize the environment of the ant colony
-        self.environment = Environment(self.rho)
+        self.environment = Environment(self.rho, self.ant_population)
 
         # Initilize the list of ants of the ant colony
         self.ants = []
@@ -46,12 +46,33 @@ class AntColony:
         # Initially, the shortest distance is set to infinite
         shortest_distance = np.inf
 
-        return solution, shortest_distance
+                    # Let ant construct a complete tour
+                    ant.run()
+
+                    # Check if this ant found a better solution
+                    if ant.traveled_distance < best_distance:
+                        shortest_distance = ant.traveled_distance
+                        solution = ant.visited.copy()
+
+                # Update pheromone trails based on all ants' tours
+                self.environment.update_pheromone_map(self.ants)
+
+                # Print progress every 10 iterations
+                if (iteration + 1) % 10 == 0:
+                    print(f"Iteration {iteration + 1}/{self.iterations}, Best distance so far: {best_distance:.2f}")
+
+            return solution, shortest_distance
 
 
 def main():
     # Intialize the ant colony
-    ant_colony = AntColony(1, None, None, None, None)
+    ant_colony = AntColony(
+    ant_population=48,
+    iterations=100,
+    alpha=1.0,
+    beta=5.0,
+    rho=0.5
+)
 
     # Solve the ant colony optimization problem
     solution, distance = ant_colony.solve()
