@@ -12,6 +12,7 @@ class Ant():
         self.current_location = initial_location
         self.traveled_distance = 0
         self.visited = []
+        self.environment = None
 
     # The ant runs to visit all the possible locations of the environment
     def run(self):
@@ -70,5 +71,10 @@ class Ant():
     def join(self, environment):
         self.environment = environment
     
-    def get_distance(self):
-        pass
+    def get_distance(self, city1, city2):
+             x1, y1 = self.environment.get_coordinates()[city1]
+             x2, y2 = self.environment.get_coordinates()[city2]
+             xd = x1 - x2
+             yd = y1 - y2
+             rij = math.sqrt((xd ** 2 + yd ** 2) / 10.0)
+             return int(round(rij))
