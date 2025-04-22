@@ -50,16 +50,12 @@ class AntColony:
                     ant.run()
 
                     # Check if this ant found a better solution
-                    if ant.traveled_distance < best_distance:
+                    if ant.traveled_distance < shortest_distance:
                         shortest_distance = ant.traveled_distance
                         solution = ant.visited.copy()
 
                 # Update pheromone trails based on all ants' tours
                 self.environment.update_pheromone_map(self.ants)
-
-                # Print progress every 10 iterations
-                if (iteration + 1) % 10 == 0:
-                    print(f"Iteration {iteration + 1}/{self.iterations}, Best distance so far: {best_distance:.2f}")
 
             return solution, shortest_distance
 
