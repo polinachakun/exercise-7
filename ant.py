@@ -1,4 +1,3 @@
-import random
 
 # Class representing an artificial ant of the ant colony
 """

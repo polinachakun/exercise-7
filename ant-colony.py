@@ -37,7 +37,7 @@ class AntColony:
             # Add the ant to the ant colony
             self.ants.append(ant)
 
-    # Solve the ant colony optimization problem
+    # Solve the ant colony optimization problem  
     def solve(self):
 
         # The solution will be a list of the visited cities
